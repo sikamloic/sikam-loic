@@ -27,8 +27,8 @@ const SKILLS_DATA: Skill[] = [
   
   // DevOps & Tools - Très recherché à l'international
   { id: '15', name: 'Git / GitHub / GitLab', category: 'devops', level: 90 },
-  { id: '16', name: 'Docker', category: 'devops', level: 60 },
-  { id: '17', name: 'CI/CD Pipelines', category: 'devops', level: 55 },
+  { id: '16', name: 'Docker', category: 'devops', level: 80 },
+  { id: '17', name: 'CI/CD Pipelines', category: 'devops', level: 80 },
   
   // Tools
   { id: '18', name: 'Jira / Agile / Scrum', category: 'tools', level: 85 },

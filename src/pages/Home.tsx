@@ -286,9 +286,9 @@ export function Home() {
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { value: '5+', label: t('home.stats.experience') },
-                  { value: '50+', label: t('home.stats.projects') },
-                  { value: '30+', label: t('home.stats.clients') },
+                  { value: '3+', label: t('home.stats.experience') },
+                  { value: '15+', label: t('home.stats.projects') },
+                  { value: '6+', label: t('home.stats.clients') },
                   { value: '100%', label: t('home.stats.passion') },
                 ].map((stat, index) => (
                   <motion.div
