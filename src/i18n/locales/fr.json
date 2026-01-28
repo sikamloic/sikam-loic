@@ -1,6 +1,6 @@
 {
   "common": {
-    "available": "Disponible pour de nouvelles opportunites",
+    "available": "Freelance disponible pour vos projets",
     "downloadCV": "Telecharger CV",
     "contactMe": "Me contacter",
     "learnMore": "En savoir plus",
@@ -26,13 +26,13 @@
   "home": {
     "greeting": "Salut, je suis",
     "title": "Developpeur Full Stack",
-    "tagline": "Je cree des applications web et mobiles modernes et performantes",
-    "bio": "Plus de 3 annees d'experience dans le developpement de solutions logicielles (applications web, mobiles et APIs REST). Creatif, organise et autonome, je maitrise les concepts orientes objet et l'architecture MVC. Passionne par les nouvelles technologies et l'IA, je m'adapte rapidement et travaille efficacement en equipe.",
+    "tagline": "Freelance Full Stack - Je cree des applications web et mobiles modernes et performantes",
+    "bio": "Developpeur Full Stack Freelance avec plus de 3 ans d'experience dans le developpement de solutions logicielles (applications web, mobiles et APIs REST). Creatif, organise et autonome, je maitrise les concepts orientes objet et l'architecture MVC. Passionne par les nouvelles technologies et l'IA, je m'adapte rapidement et travaille efficacement en equipe. Disponible pour des missions freelance a court ou long terme.",
     "location": "Cameroun",
     "roles": {
-      "fullstack": "Developpeur Full Stack",
+      "fullstack": "Developpeur Full Stack Freelance",
       "creator": "Createur d'experiences web",
-      "cleanCode": "Passione de code propre",
+      "cleanCode": "Disponible pour vos projets",
       "architect": "Architecte de solutions"
     },
     "whatIDo": "Ce que je fais",

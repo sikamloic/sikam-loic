@@ -1,6 +1,6 @@
 {
   "common": {
-    "available": "Available for new opportunities",
+    "available": "Freelancer available for your projects",
     "downloadCV": "Download CV",
     "contactMe": "Contact me",
     "learnMore": "Learn more",
@@ -26,13 +26,13 @@
   "home": {
     "greeting": "Hi, I'm",
     "title": "Full Stack Developer",
-    "tagline": "I build modern and high-performance web and mobile applications",
-    "bio": "Over 3 years of experience in software development (web apps, mobile apps, and REST APIs). Creative, organized, and autonomous, I master object-oriented concepts and MVC architecture. Passionate about new technologies and AI, I adapt quickly and work effectively in teams.",
+    "tagline": "Full Stack Freelancer - I build modern and high-performance web and mobile applications",
+    "bio": "Full Stack Freelance Developer with over 3 years of experience in software development (web apps, mobile apps, and REST APIs). Creative, organized, and autonomous, I master object-oriented concepts and MVC architecture. Passionate about new technologies and AI, I adapt quickly and work effectively in teams. Available for short or long-term freelance missions.",
     "location": "Cameroon",
     "roles": {
-      "fullstack": "Full Stack Developer",
+      "fullstack": "Full Stack Freelancer",
       "creator": "Web Experience Creator",
-      "cleanCode": "Clean Code Enthusiast",
+      "cleanCode": "Available for your projects",
       "architect": "Solution Architect"
     },
     "whatIDo": "What I do",
