@@ -5,52 +5,39 @@ import type { Education, Certification } from '../types';
 const EDUCATION_DATA: Education[] = [
   {
     id: '1',
-    institution: 'Universite de Paris',
-    degree: 'Master',
-    field: 'Informatique - Specialite Genie Logiciel',
-    description: 'Formation approfondie en conception et developpement de logiciels.',
-    location: 'Paris, France',
-    startDate: '2016-09',
-    endDate: '2018-06',
-    current: false,
+    institution: 'Institut Universitaire de la Cote',
+    degree: 'Licence (en cours)',
+    field: 'Systeme d\'Information - Option Genie Logiciel',
+    description: 'Formation en conception et developpement de solutions logicielles.',
+    location: 'Cameroun',
+    startDate: '2021-09',
+    current: true,
   },
   {
     id: '2',
-    institution: 'Universite de Lyon',
-    degree: 'Licence',
-    field: 'Informatique',
-    description: 'Fondamentaux de l\'informatique et de la programmation.',
-    location: 'Lyon, France',
-    startDate: '2013-09',
-    endDate: '2016-06',
+    institution: 'Institut Universitaire de la Cote',
+    degree: 'Brevet de Technicien Superieur (BTS)',
+    field: 'Informatique de Gestion',
+    description: 'Formation technique en informatique et gestion de projets.',
+    location: 'Cameroun',
+    startDate: '2019-09',
+    endDate: '2021-06',
+    current: false,
+  },
+  {
+    id: '3',
+    institution: 'Lycee',
+    degree: 'Baccalaureat Serie C',
+    field: 'Sciences',
+    description: 'Baccalaureat scientifique.',
+    location: 'Cameroun',
+    startDate: '2018-09',
+    endDate: '2019-06',
     current: false,
   },
 ];
 
-const CERTIFICATIONS_DATA: Certification[] = [
-  {
-    id: '1',
-    name: 'AWS Certified Developer - Associate',
-    issuer: 'Amazon Web Services',
-    issueDate: '2023-06',
-    expiryDate: '2026-06',
-    credentialUrl: 'https://aws.amazon.com/certification/',
-  },
-  {
-    id: '2',
-    name: 'Professional Scrum Master I',
-    issuer: 'Scrum.org',
-    issueDate: '2022-03',
-    credentialUrl: 'https://scrum.org/',
-  },
-  {
-    id: '3',
-    name: 'Meta Front-End Developer',
-    issuer: 'Meta (Coursera)',
-    issueDate: '2021-11',
-    credentialUrl: 'https://coursera.org/',
-  },
-];
+const CERTIFICATIONS_DATA: Certification[] = [];
 
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -82,7 +69,7 @@ function EducationCard({ education }: { education: Education }) {
               </span>
               <span className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                {formatDate(education.startDate)} - {formatDate(education.endDate!)}
+                {formatDate(education.startDate)} - {education.current ? 'Present' : formatDate(education.endDate!)}
               </span>
             </div>
             

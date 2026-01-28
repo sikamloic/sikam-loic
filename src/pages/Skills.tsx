@@ -5,18 +5,27 @@ import { ScrollReveal } from '../components/effects';
 import type { Skill, SkillCategory } from '../types';
 
 const SKILLS_DATA: Skill[] = [
-  { id: '1', name: 'React', category: 'frontend', level: 90 },
-  { id: '2', name: 'TypeScript', category: 'languages', level: 85 },
-  { id: '3', name: 'JavaScript', category: 'languages', level: 90 },
-  { id: '4', name: 'HTML/CSS', category: 'frontend', level: 95 },
+  { id: '1', name: 'Angular', category: 'frontend', level: 90 },
+  { id: '2', name: 'React / React Native', category: 'frontend', level: 85 },
+  { id: '3', name: 'VueJS', category: 'frontend', level: 80 },
+  { id: '4', name: 'HTML5/CSS3', category: 'frontend', level: 95 },
   { id: '5', name: 'TailwindCSS', category: 'frontend', level: 90 },
-  { id: '6', name: 'Node.js', category: 'backend', level: 80 },
-  { id: '7', name: 'Express', category: 'backend', level: 75 },
-  { id: '8', name: 'PostgreSQL', category: 'database', level: 70 },
-  { id: '9', name: 'MongoDB', category: 'database', level: 75 },
-  { id: '10', name: 'Git', category: 'tools', level: 85 },
-  { id: '11', name: 'Docker', category: 'devops', level: 65 },
-  { id: '12', name: 'CI/CD', category: 'devops', level: 60 },
+  { id: '6', name: 'Bootstrap', category: 'frontend', level: 85 },
+  { id: '7', name: 'TypeScript', category: 'languages', level: 85 },
+  { id: '8', name: 'JavaScript', category: 'languages', level: 90 },
+  { id: '9', name: 'PHP', category: 'languages', level: 85 },
+  { id: '10', name: 'C#', category: 'languages', level: 70 },
+  { id: '11', name: 'SQL', category: 'languages', level: 85 },
+  { id: '12', name: 'NodeJS', category: 'backend', level: 85 },
+  { id: '13', name: 'Laravel', category: 'backend', level: 90 },
+  { id: '14', name: 'NestJS', category: 'backend', level: 75 },
+  { id: '15', name: 'Spring Boot', category: 'backend', level: 65 },
+  { id: '16', name: 'MySQL', category: 'database', level: 85 },
+  { id: '17', name: 'PostgreSQL', category: 'database', level: 80 },
+  { id: '18', name: 'MongoDB', category: 'database', level: 80 },
+  { id: '19', name: 'Git / GitHub / GitLab', category: 'tools', level: 90 },
+  { id: '20', name: 'Figma', category: 'tools', level: 80 },
+  { id: '21', name: 'Jira / Trello', category: 'tools', level: 85 },
 ];
 
 
@@ -151,17 +160,14 @@ export function Skills() {
           <div className="flex flex-wrap justify-center gap-3">
             {[
               'REST API',
-              'GraphQL',
-              'Webpack',
-              'Vite',
-              'Jest',
-              'Testing Library',
-              'Figma',
-              'Agile/Scrum',
-              'Linux',
-              'AWS',
-              'Vercel',
-              'Netlify',
+              'WebSocket',
+              'UML',
+              'Merise',
+              'Scrum',
+              'Ionic',
+              'JQuery',
+              'Odoo',
+              'IA Tools',
             ].map((skill, index) => (
               <motion.div
                 key={skill}
