@@ -41,6 +41,7 @@ export interface Project {
   category: ProjectCategory;
   startDate: string;
   endDate?: string;
+  isEnterprise?: boolean;
 }
 
 export type ProjectCategory = 

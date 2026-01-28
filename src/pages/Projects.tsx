@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { ExternalLink, Github, Filter } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { ExternalLink, Github, Filter, Building2 } from 'lucide-react';
 import { Section, Card, CardBody, CardFooter, Badge, LinkButton } from '../components/ui';
 import type { Project, ProjectCategory } from '../types';
 import { cn } from '../utils';
@@ -15,7 +16,6 @@ const PROJECTS_DATA: Project[] = [
     startDate: '2024-01',
     endDate: '2024-06',
     demoUrl: 'https://coliturage.com',
-    repoUrl: 'https://github.com/loicsikam',
   },
   {
     id: '2',
@@ -26,7 +26,7 @@ const PROJECTS_DATA: Project[] = [
     category: 'web',
     startDate: '2024-01',
     demoUrl: 'https://finance-iq-beige.vercel.app/',
-    repoUrl: 'https://github.com/loicsikam',
+    repoUrl: 'https://github.com/sikamloic/FinanceIQ',
   },
   {
     id: '3',
@@ -37,6 +37,7 @@ const PROJECTS_DATA: Project[] = [
     category: 'web',
     startDate: '2024-01',
     demoUrl: 'https://my.eneo.cm',
+    isEnterprise: true,
   },
   {
     id: '4',
@@ -46,6 +47,7 @@ const PROJECTS_DATA: Project[] = [
     featured: true,
     category: 'web',
     startDate: '2024-01',
+    isEnterprise: true,
   },
   {
     id: '5',
@@ -55,6 +57,7 @@ const PROJECTS_DATA: Project[] = [
     featured: false,
     category: 'web',
     startDate: '2024-01',
+    isEnterprise: true,
   },
   {
     id: '6',
@@ -64,6 +67,7 @@ const PROJECTS_DATA: Project[] = [
     featured: false,
     category: 'web',
     startDate: '2024-01',
+    isEnterprise: true,
   },
   {
     id: '7',
@@ -74,6 +78,7 @@ const PROJECTS_DATA: Project[] = [
     category: 'web',
     startDate: '2024-01',
     demoUrl: 'https://smart.mtn.cm',
+    isEnterprise: true,
   },
   {
     id: '8',
@@ -84,21 +89,13 @@ const PROJECTS_DATA: Project[] = [
     category: 'mobile',
     startDate: '2021-09',
     demoUrl: 'https://bigoodee.fr',
+    isEnterprise: true,
   },
 ];
 
-const CATEGORY_LABELS: Record<ProjectCategory, string> = {
-  web: 'Web',
-  mobile: 'Mobile',
-  desktop: 'Desktop',
-  api: 'API',
-  library: 'Librairie',
-  other: 'Autre',
-};
-
 const ALL_CATEGORIES: ProjectCategory[] = ['web', 'mobile', 'desktop', 'api', 'library', 'other'];
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, t }: { project: Project; t: (key: string) => string }) {
   return (
     <Card variant="bordered" className="h-full flex flex-col">
       <CardBody className="flex-1">
@@ -106,15 +103,23 @@ function ProjectCard({ project }: { project: Project }) {
           <h3 className="text-lg font-semibold text-surface-900 dark:text-white">
             {project.title}
           </h3>
-          {project.featured && (
-            <Badge variant="accent" size="sm">
-              Featured
-            </Badge>
-          )}
+          <div className="flex gap-1.5">
+            {project.isEnterprise && (
+              <Badge variant="secondary" size="sm" className="flex items-center gap-1">
+                <Building2 className="w-3 h-3" />
+                {t('projects.enterprise')}
+              </Badge>
+            )}
+            {project.featured && (
+              <Badge variant="accent" size="sm">
+                {t('projects.featured')}
+              </Badge>
+            )}
+          </div>
         </div>
         
         <Badge variant="outline" size="sm" className="mb-3">
-          {CATEGORY_LABELS[project.category]}
+          {t(`projects.categories.${project.category}`)}
         </Badge>
         
         <p className="text-surface-600 dark:text-surface-400 mb-4">
@@ -141,7 +146,7 @@ function ProjectCard({ project }: { project: Project }) {
             size="sm"
             leftIcon={<ExternalLink className="w-4 h-4" />}
           >
-            Demo
+            {t('projects.demo')}
           </LinkButton>
         )}
         {project.repoUrl && (
@@ -154,7 +159,7 @@ function ProjectCard({ project }: { project: Project }) {
             size="sm"
             leftIcon={<Github className="w-4 h-4" />}
           >
-            Code
+            {t('projects.code')}
           </LinkButton>
         )}
       </CardFooter>
@@ -163,6 +168,7 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export function Projects() {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | 'all'>('all');
 
   const filteredProjects = selectedCategory === 'all'
@@ -175,8 +181,8 @@ export function Projects() {
 
   return (
     <Section
-      title="Projets"
-      subtitle="Decouvrez mes realisations et projets personnels"
+      title={t('projects.title')}
+      subtitle={t('projects.subtitle')}
     >
       <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
         <Filter className="w-4 h-4 text-surface-500" />
@@ -189,7 +195,7 @@ export function Projects() {
               : 'text-surface-600 hover:bg-surface-100 dark:text-surface-400 dark:hover:bg-surface-800'
           )}
         >
-          Tous
+          {t('projects.all')}
         </button>
         {availableCategories.map((category) => (
           <button
@@ -202,20 +208,20 @@ export function Projects() {
                 : 'text-surface-600 hover:bg-surface-100 dark:text-surface-400 dark:hover:bg-surface-800'
             )}
           >
-            {CATEGORY_LABELS[category]}
+            {t(`projects.categories.${category}`)}
           </button>
         ))}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} t={t} />
         ))}
       </div>
 
       {filteredProjects.length === 0 && (
         <p className="text-center text-surface-500 dark:text-surface-400 py-12">
-          Aucun projet dans cette categorie.
+          {t('projects.noProjects')}
         </p>
       )}
     </Section>

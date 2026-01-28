@@ -25,6 +25,10 @@
   },
   "home": {
     "greeting": "Salut, je suis",
+    "title": "Developpeur Full Stack",
+    "tagline": "Je cree des applications web et mobiles modernes et performantes",
+    "bio": "Plus de 3 annees d'experience dans le developpement de solutions logicielles (applications web, mobiles et APIs REST). Creatif, organise et autonome, je maitrise les concepts orientes objet et l'architecture MVC. Passionne par les nouvelles technologies et l'IA, je m'adapte rapidement et travaille efficacement en equipe.",
+    "location": "Cameroun",
     "roles": {
       "fullstack": "Developpeur Full Stack",
       "creator": "Createur d'experiences web",
@@ -101,7 +105,8 @@
     "title": "Projets",
     "subtitle": "Decouvrez mes realisations et projets personnels",
     "all": "Tous",
-    "featured": "Featured",
+    "featured": "En vedette",
+    "enterprise": "Entreprise",
     "demo": "Demo",
     "code": "Code",
     "noProjects": "Aucun projet dans cette categorie.",
@@ -142,6 +147,7 @@
   "contact": {
     "title": "Contact",
     "subtitle": "N'hesitez pas a me contacter pour discuter de vos projets",
+    "whatsapp": "Discuter sur WhatsApp",
     "form": {
       "name": "Nom",
       "namePlaceholder": "Votre nom",

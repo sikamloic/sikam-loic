@@ -90,14 +90,14 @@ export function Home() {
               
               <ScrollReveal direction="left" delay={0.3}>
                 <p className="text-lg text-surface-600 dark:text-surface-400 mb-6 max-w-lg">
-                  {PERSONAL_INFO.tagline}
+                  {t('home.tagline')}
                 </p>
               </ScrollReveal>
               
               <ScrollReveal direction="left" delay={0.4}>
                 <div className="flex items-center gap-2 text-surface-500 dark:text-surface-400 mb-8">
                   <MapPin className="w-4 h-4" />
-                  <span>{PERSONAL_INFO.location}</span>
+                  <span>{t('home.location')}</span>
                 </div>
               </ScrollReveal>
               
@@ -270,7 +270,7 @@ export function Home() {
                 </span>
               </h2>
               <p className="text-lg text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-                {PERSONAL_INFO.bio}
+                {t('home.bio')}
               </p>
               <MagneticButton strength={0.15}>
                 <LinkButton

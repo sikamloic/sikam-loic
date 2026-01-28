@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
 import { Section, Card, CardBody, Button, Input, Textarea } from '../components/ui';
 import { PERSONAL_INFO } from '../constants';
 import type { ContactForm } from '../types';
@@ -147,6 +147,23 @@ export function Contact() {
                     <div>
                       <p className="text-sm text-surface-500 dark:text-surface-400">{t('about.contact.phone')}</p>
                       <p className="font-medium">{PERSONAL_INFO.phone}</p>
+                    </div>
+                  </a>
+                )}
+                
+                {PERSONAL_INFO.phone && (
+                  <a
+                    href={`https://wa.me/${PERSONAL_INFO.phone.replace(/[^0-9]/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-surface-600 dark:text-surface-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                      <MessageCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-surface-500 dark:text-surface-400">WhatsApp</p>
+                      <p className="font-medium">{t('contact.whatsapp')}</p>
                     </div>
                   </a>
                 )}

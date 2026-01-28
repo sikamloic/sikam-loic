@@ -25,6 +25,10 @@
   },
   "home": {
     "greeting": "Hi, I'm",
+    "title": "Full Stack Developer",
+    "tagline": "I build modern and high-performance web and mobile applications",
+    "bio": "Over 3 years of experience in software development (web apps, mobile apps, and REST APIs). Creative, organized, and autonomous, I master object-oriented concepts and MVC architecture. Passionate about new technologies and AI, I adapt quickly and work effectively in teams.",
+    "location": "Cameroon",
     "roles": {
       "fullstack": "Full Stack Developer",
       "creator": "Web Experience Creator",
@@ -102,6 +106,7 @@
     "subtitle": "Discover my achievements and personal projects",
     "all": "All",
     "featured": "Featured",
+    "enterprise": "Enterprise",
     "demo": "Demo",
     "code": "Code",
     "noProjects": "No projects in this category.",
@@ -142,6 +147,7 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Feel free to contact me to discuss your projects",
+    "whatsapp": "Chat on WhatsApp",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",

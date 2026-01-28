@@ -10,13 +10,13 @@ export const PERSONAL_INFO: PersonalInfo = {
 les concepts orientes objet et l'architecture MVC. Passionne par les nouvelles 
 technologies et l'IA, je m'adapte rapidement et travaille efficacement en equipe.`,
   email: 'loicsikam272@gmail.com',
-  phone: '+237 683 264 491',
+  phone: '+237 683 264 591',
   location: 'Cameroun',
   avatarUrl: '/avatar.jpg',
   resumeUrl: '/cv.pdf',
   availability: true,
   socialLinks: [
-    { platform: 'GitHub', url: 'https://github.com/loicsikam', icon: 'github' },
+    { platform: 'GitHub', url: 'https://github.com/sikamloic', icon: 'github' },
     { platform: 'LinkedIn', url: 'https://linkedin.com/in/loicsikam', icon: 'linkedin' },
   ],
 };

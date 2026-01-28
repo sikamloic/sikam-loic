@@ -76,8 +76,7 @@ function SkillBar({ skill, delay = 0 }: { skill: Skill; delay?: number }) {
     <motion.div 
       className="mb-4 last:mb-0"
       initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ delay, duration: 0.4 }}
     >
       <div className="flex justify-between items-center mb-1">
@@ -87,8 +86,7 @@ function SkillBar({ skill, delay = 0 }: { skill: Skill; delay?: number }) {
         <motion.span 
           className="text-xs font-semibold text-surface-500 dark:text-surface-400"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ delay: delay + 0.3 }}
         >
           {skill.level}%
@@ -98,8 +96,7 @@ function SkillBar({ skill, delay = 0 }: { skill: Skill; delay?: number }) {
         <motion.div
           className={`h-full ${bgClass} rounded-full relative`}
           initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          viewport={{ once: true }}
+          animate={{ width: `${skill.level}%` }}
           transition={{ delay: delay + 0.2, duration: 0.8, ease: 'easeOut' }}
         >
           <motion.div
