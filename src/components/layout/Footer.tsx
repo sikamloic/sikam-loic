@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Container } from '../ui';
 import { PERSONAL_INFO, NAV_ITEMS } from '../../constants';
@@ -10,6 +11,7 @@ const socialIcons: Record<string, typeof Github> = {
 };
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -25,13 +27,13 @@ export function Footer() {
                 Portfolio
               </Link>
               <p className="mt-4 text-sm text-surface-600 dark:text-surface-400">
-                {PERSONAL_INFO.tagline}
+                {t('home.tagline')}
               </p>
             </div>
 
             <div>
               <h3 className="text-sm font-semibold text-surface-900 dark:text-white uppercase tracking-wider mb-4">
-                Navigation
+                {t('footer.navigation')}
               </h3>
               <ul className="space-y-2">
                 {NAV_ITEMS.slice(0, 5).map((item) => (
@@ -40,7 +42,7 @@ export function Footer() {
                       to={item.href}
                       className="text-sm text-surface-600 hover:text-primary-600 dark:text-surface-400 dark:hover:text-primary-400 transition-colors"
                     >
-                      {item.label}
+                      {t(`nav.${item.key}`)}
                     </Link>
                   </li>
                 ))}
@@ -49,7 +51,7 @@ export function Footer() {
 
             <div>
               <h3 className="text-sm font-semibold text-surface-900 dark:text-white uppercase tracking-wider mb-4">
-                Contact
+                {t('footer.contact')}
               </h3>
               <div className="space-y-2">
                 <a
@@ -83,7 +85,7 @@ export function Footer() {
 
         <div className="py-6 border-t border-surface-200 dark:border-surface-800">
           <p className="text-center text-sm text-surface-500 dark:text-surface-500">
-            {currentYear} {PERSONAL_INFO.firstName} {PERSONAL_INFO.lastName}. Tous droits reserves.
+            © {currentYear} {PERSONAL_INFO.firstName} {PERSONAL_INFO.lastName}. {t('footer.rights')}
           </p>
         </div>
       </Container>
