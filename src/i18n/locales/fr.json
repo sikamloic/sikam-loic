@@ -1,0 +1,173 @@
+{
+  "common": {
+    "available": "Disponible pour de nouvelles opportunites",
+    "downloadCV": "Telecharger CV",
+    "contactMe": "Me contacter",
+    "learnMore": "En savoir plus",
+    "viewMore": "Voir plus",
+    "backHome": "Retour a l'accueil",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "send": "Envoyer",
+    "years": "annees",
+    "present": "Present",
+    "current": "Actuel"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "A propos",
+    "skills": "Competences",
+    "projects": "Projets",
+    "experience": "Experience",
+    "education": "Formation",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Salut, je suis",
+    "roles": {
+      "fullstack": "Developpeur Full Stack",
+      "creator": "Createur d'experiences web",
+      "cleanCode": "Passione de code propre",
+      "architect": "Architecte de solutions"
+    },
+    "whatIDo": "Ce que je fais",
+    "transformIdeas": "Transformer les idees en",
+    "digitalExperiences": "experiences digitales",
+    "frontend": {
+      "title": "Developpement Frontend",
+      "description": "Interfaces modernes, reactives et accessibles avec React, TypeScript et les dernieres technologies."
+    },
+    "backend": {
+      "title": "Architecture Backend",
+      "description": "APIs robustes et scalables, bases de donnees optimisees et integration de services."
+    },
+    "fullProjects": {
+      "title": "Projets Complets",
+      "description": "De l'idee au deploiement, je cree des solutions completes qui repondent a vos besoins."
+    },
+    "aboutSection": {
+      "title": "A propos",
+      "passionate": "Passione par le code,",
+      "motivated": "motive par l'impact",
+      "discoverPath": "Decouvrir mon parcours"
+    },
+    "stats": {
+      "experience": "Annees d'experience",
+      "projects": "Projets realises",
+      "clients": "Clients satisfaits",
+      "passion": "Passion"
+    }
+  },
+  "about": {
+    "title": "A propos",
+    "subtitle": "Decouvrez mon parcours et ma passion pour le developpement",
+    "whoAmI": "Qui suis-je ?",
+    "philosophy": "Ma philosophie",
+    "philosophyText": "Je crois en un code propre, maintenable et bien documente. Chaque projet est une opportunite d'apprendre et de s'ameliorer. Je privilegie les solutions simples et elegantes aux architectures complexes.",
+    "interests": "Centres d'interet",
+    "interestsList": {
+      "openSource": "Open Source",
+      "newTech": "Nouvelles technologies",
+      "architecture": "Architecture logicielle",
+      "performance": "Performance web",
+      "uxui": "UX/UI Design",
+      "techWatch": "Veille technologique"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Telephone",
+      "location": "Localisation",
+      "availability": "Disponibilite",
+      "available": "Disponible",
+      "notAvailable": "Non disponible"
+    }
+  },
+  "skills": {
+    "title": "Competences",
+    "subtitle": "Les technologies et outils que je maitrise",
+    "otherSkills": "Autres competences",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de donnees",
+      "devops": "DevOps",
+      "tools": "Outils",
+      "languages": "Langages",
+      "softSkills": "Soft Skills"
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Decouvrez mes realisations et projets personnels",
+    "all": "Tous",
+    "featured": "Featured",
+    "demo": "Demo",
+    "code": "Code",
+    "noProjects": "Aucun projet dans cette categorie.",
+    "categories": {
+      "web": "Web",
+      "mobile": "Mobile",
+      "desktop": "Desktop",
+      "api": "API",
+      "library": "Librairie",
+      "other": "Autre"
+    }
+  },
+  "experience": {
+    "title": "Experience professionnelle",
+    "subtitle": "Mon parcours et mes experiences dans le developpement",
+    "yearsExperience": "annees d'experience professionnelle",
+    "downloadFullCV": "Telecharger mon CV complet",
+    "currentPosition": "Poste actuel"
+  },
+  "education": {
+    "title": "Formation",
+    "subtitle": "Mon parcours academique",
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Mes certifications professionnelles",
+      "viewCertificate": "Voir le certificat",
+      "obtained": "Obtenu",
+      "expires": "Expire"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles et reflexions sur le developpement web",
+    "readMore": "Lire",
+    "minRead": "min",
+    "noPosts": "Aucun article pour le moment. Revenez bientot !"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "N'hesitez pas a me contacter pour discuter de vos projets",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sujet de votre message",
+      "message": "Message",
+      "messagePlaceholder": "Votre message..."
+    },
+    "success": "Message envoye avec succes !",
+    "error": "Une erreur est survenue. Veuillez reessayer.",
+    "info": {
+      "title": "Informations de contact"
+    },
+    "social": {
+      "title": "Reseaux sociaux"
+    }
+  },
+  "notFound": {
+    "title": "Page non trouvee",
+    "description": "Desolee, la page que vous recherchez n'existe pas ou a ete deplacee."
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "rights": "Tous droits reserves."
+  }
+}
