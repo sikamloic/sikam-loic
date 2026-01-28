@@ -5,27 +5,42 @@ import { ScrollReveal } from '../components/effects';
 import type { Skill, SkillCategory } from '../types';
 
 const SKILLS_DATA: Skill[] = [
-  { id: '1', name: 'Angular', category: 'frontend', level: 90 },
-  { id: '2', name: 'React / React Native', category: 'frontend', level: 85 },
-  { id: '3', name: 'VueJS', category: 'frontend', level: 80 },
-  { id: '4', name: 'HTML5/CSS3', category: 'frontend', level: 95 },
+  // Frontend - Technologies les plus demandées en premier
+  { id: '1', name: 'React / React Native', category: 'frontend', level: 85 },
+  { id: '2', name: 'TypeScript', category: 'frontend', level: 85 },
+  { id: '3', name: 'Angular', category: 'frontend', level: 90 },
+  { id: '4', name: 'Vue.js', category: 'frontend', level: 80 },
   { id: '5', name: 'TailwindCSS', category: 'frontend', level: 90 },
-  { id: '6', name: 'Bootstrap', category: 'frontend', level: 85 },
-  { id: '7', name: 'TypeScript', category: 'languages', level: 85 },
-  { id: '8', name: 'JavaScript', category: 'languages', level: 90 },
-  { id: '9', name: 'PHP', category: 'languages', level: 85 },
-  { id: '10', name: 'C#', category: 'languages', level: 70 },
-  { id: '11', name: 'SQL', category: 'languages', level: 85 },
-  { id: '12', name: 'NodeJS', category: 'backend', level: 85 },
-  { id: '13', name: 'Laravel', category: 'backend', level: 90 },
-  { id: '14', name: 'NestJS', category: 'backend', level: 75 },
-  { id: '15', name: 'Spring Boot', category: 'backend', level: 65 },
-  { id: '16', name: 'MySQL', category: 'database', level: 85 },
-  { id: '17', name: 'PostgreSQL', category: 'database', level: 80 },
-  { id: '18', name: 'MongoDB', category: 'database', level: 80 },
-  { id: '19', name: 'Git / GitHub / GitLab', category: 'tools', level: 90 },
-  { id: '20', name: 'Figma', category: 'tools', level: 80 },
-  { id: '21', name: 'Jira / Trello', category: 'tools', level: 85 },
+  { id: '6', name: 'HTML5 / CSS3', category: 'frontend', level: 95 },
+  
+  // Backend - Node.js en premier (plus demandé internationalement)
+  { id: '7', name: 'Node.js / Express', category: 'backend', level: 85 },
+  { id: '8', name: 'NestJS', category: 'backend', level: 75 },
+  { id: '9', name: 'Laravel (PHP)', category: 'backend', level: 90 },
+  { id: '10', name: 'REST API Design', category: 'backend', level: 90 },
+  { id: '11', name: 'Spring Boot (Java)', category: 'backend', level: 65 },
+  
+  // Database
+  { id: '12', name: 'PostgreSQL', category: 'database', level: 80 },
+  { id: '13', name: 'MySQL', category: 'database', level: 85 },
+  { id: '14', name: 'MongoDB', category: 'database', level: 80 },
+  
+  // DevOps & Tools - Très recherché à l'international
+  { id: '15', name: 'Git / GitHub / GitLab', category: 'devops', level: 90 },
+  { id: '16', name: 'Docker', category: 'devops', level: 60 },
+  { id: '17', name: 'CI/CD Pipelines', category: 'devops', level: 55 },
+  
+  // Tools
+  { id: '18', name: 'Jira / Agile / Scrum', category: 'tools', level: 85 },
+  { id: '19', name: 'Figma / UI Design', category: 'tools', level: 80 },
+  { id: '20', name: 'VS Code / Dev Tools', category: 'tools', level: 90 },
+  
+  // Soft Skills - Très valorisés à l'international
+  { id: '21', name: 'Problem Solving', category: 'soft-skills', level: 90 },
+  { id: '22', name: 'Team Collaboration', category: 'soft-skills', level: 85 },
+  { id: '23', name: 'Communication', category: 'soft-skills', level: 85 },
+  { id: '24', name: 'Autonomy', category: 'soft-skills', level: 90 },
+  { id: '25', name: 'Adaptability', category: 'soft-skills', level: 90 },
 ];
 
 
@@ -159,15 +174,15 @@ export function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'REST API',
               'WebSocket',
+              'GraphQL',
+              'Unit Testing',
               'UML',
-              'Merise',
-              'Scrum',
               'Ionic',
-              'JQuery',
-              'Odoo',
-              'IA Tools',
+              'Linux',
+              'AI Tools',
+              'Responsive Design',
+              'Clean Code',
             ].map((skill, index) => (
               <motion.div
                 key={skill}
