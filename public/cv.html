@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Loic Sikam | Full Stack Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 20mm;
+    }
+    
+    @media print {
+      body {
+        padding: 15mm;
+      }
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid #10b981;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+    }
+    
+    .header-left h1 {
+      font-size: 28px;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+    
+    .header-left .title {
+      font-size: 16px;
+      color: #10b981;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .header-left .tagline {
+      font-size: 13px;
+      color: #64748b;
+      max-width: 350px;
+    }
+    
+    .header-right {
+      text-align: right;
+      font-size: 13px;
+      color: #475569;
+    }
+    
+    .header-right a {
+      color: #10b981;
+      text-decoration: none;
+    }
+    
+    .header-right div {
+      margin-bottom: 5px;
+    }
+    
+    .section {
+      margin-bottom: 25px;
+    }
+    
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #10b981;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    
+    .skill-category {
+      margin-bottom: 10px;
+    }
+    
+    .skill-category-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+    
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    
+    .skill-tag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+    
+    .skill-tag.primary {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    
+    .experience-item {
+      margin-bottom: 20px;
+    }
+    
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    
+    .experience-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+    
+    .experience-company {
+      font-size: 13px;
+      color: #10b981;
+      font-weight: 500;
+    }
+    
+    .experience-date {
+      font-size: 12px;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    
+    .experience-description {
+      font-size: 12px;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+    
+    .experience-projects {
+      font-size: 11px;
+      color: #64748b;
+    }
+    
+    .experience-projects strong {
+      color: #475569;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 5px;
+    }
+    
+    .tech-tag {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #64748b;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+    }
+    
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .education-degree {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+    
+    .education-school {
+      font-size: 12px;
+      color: #64748b;
+    }
+    
+    .education-date {
+      font-size: 12px;
+      color: #64748b;
+    }
+    
+    .languages {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .language-item {
+      font-size: 12px;
+    }
+    
+    .language-name {
+      font-weight: 600;
+      color: #1e293b;
+    }
+    
+    .language-level {
+      color: #64748b;
+    }
+    
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    
+    .projects-list {
+      font-size: 12px;
+    }
+    
+    .project-item {
+      margin-bottom: 8px;
+    }
+    
+    .project-name {
+      font-weight: 600;
+      color: #1e293b;
+    }
+    
+    .project-desc {
+      color: #64748b;
+    }
+    
+    .project-link {
+      color: #10b981;
+      font-size: 11px;
+    }
+    
+    .footer {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    
+    .footer a {
+      color: #10b981;
+      text-decoration: none;
+    }
+    
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <h1>Loic Sikam</h1>
+      <div class="title">Développeur Full Stack Freelance</div>
+      <div class="tagline">3+ ans d'expérience en développement web & mobile. Spécialisé en React, Angular, Node.js et Laravel. Disponible pour des missions freelance.</div>
+    </div>
+    <div class="header-right">
+      <div>📧 loicsikam272@gmail.com</div>
+      <div>📱 +237 683 264 591</div>
+      <div>📍 Cameroun (Remote OK)</div>
+      <div>🔗 <a href="https://github.com/sikamloic">github.com/sikamloic</a></div>
+      <div>🔗 <a href="https://linkedin.com/in/loicsikam">linkedin.com/in/loicsikam</a></div>
+      <div>🌐 <a href="https://sikam-loic.vercel.app">sikam-loic.vercel.app</a></div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Compétences Techniques</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="skill-category-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">React</span>
+          <span class="skill-tag primary">TypeScript</span>
+          <span class="skill-tag primary">Angular</span>
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">TailwindCSS</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Node.js</span>
+          <span class="skill-tag primary">Laravel</span>
+          <span class="skill-tag">NestJS</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">Spring Boot</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">Base de données</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">DevOps & Outils</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Expériences Professionnelles</h2>
+    
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <div class="experience-title">Développeur Full Stack</div>
+          <div class="experience-company">ZEN-AFRICA (Adfreak Agency)</div>
+        </div>
+        <div class="experience-date">Déc. 2023 - Présent</div>
+      </div>
+      <div class="experience-description">
+        Développement de solutions logicielles pour des clients majeurs (ENEO, MTN, SABC). Participation aux réunions de cadrage, analyse fonctionnelle, implémentation et tests.
+      </div>
+      <div class="experience-projects">
+        <strong>Projets clés:</strong> Portail client ENEO (1000+ requêtes/mois), Miss Ayoba (50,000+ votes), MutzigStar, Heineken Live Quizz
+      </div>
+      <div class="tech-stack">
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">REST API</span>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <div class="experience-title">Développeur Full Stack</div>
+          <div class="experience-company">TSA (Technologies des Systèmes Avancées)</div>
+        </div>
+        <div class="experience-date">Sept. 2022 - Déc. 2023</div>
+      </div>
+      <div class="experience-description">
+        Développement d'applications internes, maintenance IT pour clients (Laborex, SCDP, SUNU Assurance), configuration réseaux.
+      </div>
+      <div class="experience-projects">
+        <strong>Projet clé:</strong> Plateforme de gestion des tâches interne
+      </div>
+      <div class="tech-stack">
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Odoo</span>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <div class="experience-title">Développeur Full Stack</div>
+          <div class="experience-company">Agyl Tech (Bigoodee)</div>
+        </div>
+        <div class="experience-date">Sept. 2021 - Jan. 2022</div>
+      </div>
+      <div class="experience-description">
+        Développement d'une marketplace cross-platform pour le soin capillaire. Intégration web et mobile, APIs REST.
+      </div>
+      <div class="experience-projects">
+        <strong>Projet:</strong> bigoodee.fr - Plateforme e-commerce avec apps web et mobile
+      </div>
+      <div class="tech-stack">
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">React Native</span>
+        <span class="tech-tag">MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="two-columns">
+    <section class="section">
+      <h2 class="section-title">Projets Personnels</h2>
+      <div class="projects-list">
+        <div class="project-item">
+          <div class="project-name">Coliturage</div>
+          <div class="project-desc">Plateforme de covoiturage de colis (Laravel, Vue.js)</div>
+          <div class="project-link">coliturage.com</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Finance IQ</div>
+          <div class="project-desc">App de gestion financière personnelle (React, TypeScript)</div>
+          <div class="project-link">github.com/sikamloic/FinanceIQ</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Formation</h2>
+      <div class="education-item">
+        <div>
+          <div class="education-degree">Licence en Génie Logiciel</div>
+          <div class="education-school">En cours</div>
+        </div>
+      </div>
+      <div class="education-item">
+        <div>
+          <div class="education-degree">BTS Informatique</div>
+          <div class="education-school">Institut Universitaire de la Côte</div>
+        </div>
+        <div class="education-date">2021</div>
+      </div>
+      <div class="education-item">
+        <div>
+          <div class="education-degree">Baccalauréat Série C</div>
+        </div>
+        <div class="education-date">2019</div>
+      </div>
+      
+      <h2 class="section-title" style="margin-top: 20px;">Langues</h2>
+      <div class="languages">
+        <div class="language-item">
+          <span class="language-name">Français</span>
+          <span class="language-level">- Natif</span>
+        </div>
+        <div class="language-item">
+          <span class="language-name">Anglais</span>
+          <span class="language-level">- Professionnel</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">
+    Portfolio: <a href="https://sikam-loic.vercel.app">sikam-loic.vercel.app</a> | 
+    Disponible immédiatement pour des missions freelance
+  </div>
+</body>
+</html>

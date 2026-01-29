@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, MapPin, Code2, Layers, Rocket, Github, Linkedin, Twitter } from 'lucide-react';
-import { LinkButton, Container, Badge, InteractiveTerminal } from '../components/ui';
+import { ArrowRight, MapPin, Code2, Layers, Rocket, Github, Linkedin, Twitter } from 'lucide-react';
+import { LinkButton, Container, Badge, InteractiveTerminal, CVDownloadButton } from '../components/ui';
 import { 
   ScrollReveal, 
   TypeWriter, 
@@ -113,20 +113,9 @@ export function Home() {
                     </LinkButton>
                   </MagneticButton>
                   
-                  {PERSONAL_INFO.resumeUrl && (
-                    <MagneticButton strength={0.2}>
-                      <LinkButton
-                        external
-                        href={PERSONAL_INFO.resumeUrl}
-                        download
-                        variant="outline"
-                        size="lg"
-                        leftIcon={<Download className="w-5 h-5" />}
-                      >
-                        {t('common.downloadCV')}
-                      </LinkButton>
-                    </MagneticButton>
-                  )}
+                  <MagneticButton strength={0.2}>
+                    <CVDownloadButton />
+                  </MagneticButton>
                 </div>
               </ScrollReveal>
 

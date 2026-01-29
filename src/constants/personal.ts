@@ -13,7 +13,7 @@ technologies et l'IA, je m'adapte rapidement et travaille efficacement en equipe
   phone: '+237 683 264 591',
   location: 'Cameroun',
   avatarUrl: '/avatar.jpg',
-  resumeUrl: '/cv.pdf',
+  resumeUrl: '/cv.html',
   availability: true,
   socialLinks: [
     { platform: 'GitHub', url: 'https://github.com/sikamloic', icon: 'github' },

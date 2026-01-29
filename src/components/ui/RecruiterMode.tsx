@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Briefcase, X, Download, Mail, Phone, MapPin, Github, Linkedin, CheckCircle, Star } from 'lucide-react';
+import { Briefcase, X, Mail, Phone, MapPin, Github, Linkedin, CheckCircle, Star } from 'lucide-react';
 import { PERSONAL_INFO } from '../../constants';
+import { CVDownloadButton } from './CVDownloadButton';
 
 export function RecruiterMode() {
   const [isOpen, setIsOpen] = useState(false);
@@ -203,14 +204,7 @@ export function RecruiterMode() {
               <div className="border-t border-surface-200 dark:border-surface-700 p-4 bg-surface-50 dark:bg-surface-800">
                 <p className="text-center text-surface-600 dark:text-surface-400 mb-4">{c.cta}</p>
                 <div className="flex flex-wrap justify-center gap-3">
-                  <a
-                    href={PERSONAL_INFO.resumeUrl}
-                    download
-                    className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    {c.download}
-                  </a>
+                  <CVDownloadButton variant="primary" size="md" />
                   <a
                     href={`mailto:${PERSONAL_INFO.email}`}
                     className="flex items-center gap-2 px-4 py-2 bg-surface-200 dark:bg-surface-700 text-surface-900 dark:text-white rounded-lg hover:bg-surface-300 dark:hover:bg-surface-600 transition-colors"

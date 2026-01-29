@@ -9,3 +9,4 @@ export { Textarea } from './Textarea';
 export { LanguageSwitcher } from './LanguageSwitcher';
 export { InteractiveTerminal } from './InteractiveTerminal';
 export { RecruiterMode } from './RecruiterMode';
+export { CVDownloadButton } from './CVDownloadButton';
