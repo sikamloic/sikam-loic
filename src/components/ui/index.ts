@@ -7,3 +7,5 @@ export { Section } from './Section';
 export { Input } from './Input';
 export { Textarea } from './Textarea';
 export { LanguageSwitcher } from './LanguageSwitcher';
+export { InteractiveTerminal } from './InteractiveTerminal';
+export { RecruiterMode } from './RecruiterMode';

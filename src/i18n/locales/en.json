@@ -50,6 +50,11 @@
       "title": "Complete Projects",
       "description": "From idea to deployment, I create complete solutions that meet your needs."
     },
+    "terminal": {
+      "badge": "Interactive",
+      "title": "Explore my profile",
+      "subtitle": "An interactive terminal to discover who I am. Type commands to learn more!"
+    },
     "aboutSection": {
       "title": "About",
       "passionate": "Passionate about code,",

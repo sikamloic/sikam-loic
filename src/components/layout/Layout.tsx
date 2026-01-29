@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { CursorGlow, FloatingShapes, PageTransition } from '../effects';
+import { RecruiterMode } from '../ui';
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,6 +18,7 @@ export function Layout({ children }: LayoutProps) {
         <PageTransition>{children}</PageTransition>
       </main>
       <Footer />
+      <RecruiterMode />
     </div>
   );
 }

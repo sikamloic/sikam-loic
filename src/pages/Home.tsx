@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, MapPin, Code2, Layers, Rocket, Github, Linkedin, Twitter } from 'lucide-react';
-import { LinkButton, Container, Badge } from '../components/ui';
+import { LinkButton, Container, Badge, InteractiveTerminal } from '../components/ui';
 import { 
   ScrollReveal, 
   TypeWriter, 
@@ -255,6 +255,28 @@ export function Home() {
               </motion.div>
             ))}
           </div>
+        </Container>
+      </section>
+
+      {/* Terminal Interactif */}
+      <section className="py-20 bg-surface-100/50 dark:bg-surface-900/50">
+        <Container>
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <Badge variant="secondary" className="mb-4">
+                {t('home.terminal.badge')}
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-surface-900 dark:text-white mb-4">
+                {t('home.terminal.title')}
+              </h2>
+              <p className="text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+                {t('home.terminal.subtitle')}
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <InteractiveTerminal />
+          </ScrollReveal>
         </Container>
       </section>
 
