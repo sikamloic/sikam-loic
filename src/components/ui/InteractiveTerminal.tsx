@@ -178,6 +178,10 @@ export function InteractiveTerminal() {
       setLines(prev => [...prev, { type: 'output', content: line }]);
     }
     setIsTyping(false);
+    // Redonner le focus a l'input apres l'animation
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 50);
   };
 
   const handleCommand = async (cmd: string) => {
@@ -188,6 +192,7 @@ export function InteractiveTerminal() {
 
     if (trimmedCmd === 'clear') {
       setLines([{ type: 'output', content: lang === 'fr' ? '👋 Terminal effacé. Tapez "help" pour l\'aide.' : '👋 Terminal cleared. Type "help" for help.' }]);
+      setTimeout(() => inputRef.current?.focus(), 50);
       return;
     }
 
@@ -196,6 +201,7 @@ export function InteractiveTerminal() {
     if (command) {
       await typeOutput(command[lang]);
     } else if (trimmedCmd === '') {
+      setTimeout(() => inputRef.current?.focus(), 50);
       return;
     } else {
       setLines(prev => [...prev, { 
@@ -204,6 +210,7 @@ export function InteractiveTerminal() {
           ? `Commande non reconnue: "${trimmedCmd}". Tapez "help" pour la liste des commandes.`
           : `Command not found: "${trimmedCmd}". Type "help" for available commands.`
       }]);
+      setTimeout(() => inputRef.current?.focus(), 50);
     }
   };
 
@@ -279,11 +286,6 @@ export function InteractiveTerminal() {
               autoComplete="off"
               autoCorrect="off"
               autoCapitalize="off"
-            />
-            <motion.span
-              animate={{ opacity: [1, 0] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
-              className="w-2 h-5 bg-primary-400 ml-1"
             />
           </div>
         </div>

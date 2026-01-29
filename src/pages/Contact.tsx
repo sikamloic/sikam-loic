@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import type { FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
 import { Section, Card, CardBody, Button, Input, Textarea } from '../components/ui';
 import { PERSONAL_INFO } from '../constants';
 import type { ContactForm } from '../types';
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
 const socialIcons: Record<string, typeof Github> = {
   github: Github,
@@ -14,6 +19,7 @@ const socialIcons: Record<string, typeof Github> = {
 
 export function Contact() {
   const { t } = useTranslation();
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
@@ -29,7 +35,24 @@ export function Contact() {
     setSubmitStatus('idle');
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            to_email: PERSONAL_INFO.email,
+          },
+          EMAILJS_PUBLIC_KEY
+        );
+      } else {
+        // Fallback: ouvrir le client email
+        const mailtoLink = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`De: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
+        window.open(mailtoLink, '_blank');
+      }
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch {

@@ -5,11 +5,11 @@ import { Section, Card, CardBody, CardFooter, Badge, LinkButton } from '../compo
 import type { Project, ProjectCategory } from '../types';
 import { cn } from '../utils';
 
-const PROJECTS_DATA: Project[] = [
+const PROJECTS_DATA: (Omit<Project, 'description'> & { descriptionKey: string })[] = [
   {
     id: '1',
     title: 'Coliturage',
-    description: 'Built a full-stack platform connecting travelers with package senders. Implemented secure authentication, real-time trip matching, and email notification system. Deployed and serving users in France.',
+    descriptionKey: 'coliturage',
     technologies: ['Laravel', 'VueJS 3', 'MySQL', 'Tailwind', 'REST API'],
     featured: true,
     category: 'web',
@@ -20,7 +20,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '2',
     title: 'Finance IQ',
-    description: 'Personal finance app with offline-first architecture using IndexedDB. Features budget tracking, expense categorization, and visual analytics. 100% client-side for data privacy.',
+    descriptionKey: 'financeiq',
     technologies: ['React', 'TypeScript', 'IndexedDB', 'Tailwind', 'Chart.js'],
     featured: true,
     category: 'web',
@@ -31,7 +31,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '3',
     title: 'ENEO Customer Portal',
-    description: 'Enterprise portal for Cameroon\'s national electricity company. Developed the connection request module handling 1000+ monthly requests. Integrated with legacy systems via REST APIs.',
+    descriptionKey: 'eneo',
     technologies: ['Laravel', 'Angular', 'PostgreSQL', 'Tailwind', 'Docker'],
     featured: true,
     category: 'web',
@@ -42,7 +42,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '4',
     title: 'MutzigStar Music Contest',
-    description: 'Real-time jury scoring system for national music competition (SABC). Built QR code-based candidate management and video processing pipeline for 500+ submissions.',
+    descriptionKey: 'mutzigstar',
     technologies: ['PHP', 'MySQL', 'JavaScript', 'WebSocket', 'Tailwind'],
     featured: true,
     category: 'web',
@@ -52,7 +52,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '5',
     title: 'Miss Ayoba Voting Platform',
-    description: 'Multi-platform voting system integrated with MTN Ayoba app. Handled 50,000+ votes with real-time monitoring dashboard for jury members on tablets.',
+    descriptionKey: 'missayoba',
     technologies: ['Node.js', 'MySQL', 'Socket.io', 'Tailwind'],
     featured: false,
     category: 'web',
@@ -62,7 +62,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '6',
     title: 'Heineken Live Quizz',
-    description: 'Consumer engagement platform for SABC/Heineken campaigns. Gamified quizz system with leaderboards and prize management. Trained end-users on the platform.',
+    descriptionKey: 'heinekenquizz',
     technologies: ['PHP', 'MySQL', 'JavaScript', 'Tailwind'],
     featured: false,
     category: 'web',
@@ -72,7 +72,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '7',
     title: 'MTN Quizz Campaign',
-    description: 'Subscriber loyalty platform for MTN Cameroon campaigns. Built scalable REST API handling peak traffic during promotional periods.',
+    descriptionKey: 'mtnquizz',
     technologies: ['Laravel', 'Angular', 'MySQL', 'Tailwind', 'Redis'],
     featured: false,
     category: 'web',
@@ -83,7 +83,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '8',
     title: 'Bigoodee',
-    description: 'Cross-platform haircare marketplace with web and mobile apps. Implemented booking system, product catalog, and payment integration.',
+    descriptionKey: 'bigoodee',
     technologies: ['Node.js', 'MongoDB', 'Angular', 'React Native', 'Tailwind'],
     featured: false,
     category: 'mobile',
@@ -95,7 +95,9 @@ const PROJECTS_DATA: Project[] = [
 
 const ALL_CATEGORIES: ProjectCategory[] = ['web', 'mobile', 'desktop', 'api', 'library', 'other'];
 
-function ProjectCard({ project, t }: { project: Project; t: (key: string) => string }) {
+type ProjectWithKey = Omit<Project, 'description'> & { descriptionKey: string };
+
+function ProjectCard({ project, t }: { project: ProjectWithKey; t: (key: string) => string }) {
   return (
     <Card variant="bordered" className="h-full flex flex-col">
       <CardBody className="flex-1">
@@ -123,7 +125,7 @@ function ProjectCard({ project, t }: { project: Project; t: (key: string) => str
         </Badge>
         
         <p className="text-surface-600 dark:text-surface-400 mb-4">
-          {project.description}
+          {t(`projects.descriptions.${project.descriptionKey}`)}
         </p>
         
         <div className="flex flex-wrap gap-2">

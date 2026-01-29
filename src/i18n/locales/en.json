@@ -123,6 +123,16 @@
       "api": "API",
       "library": "Library",
       "other": "Other"
+    },
+    "descriptions": {
+      "coliturage": "Built a full-stack platform connecting travelers with package senders. Implemented secure authentication, real-time trip matching, and email notification system. Deployed and serving users in France.",
+      "financeiq": "Personal finance app with offline-first architecture using IndexedDB. Features budget tracking, expense categorization, and visual analytics. 100% client-side for data privacy.",
+      "eneo": "Enterprise portal for Cameroon's national electricity company. Developed the connection request module handling 1000+ monthly requests. Integrated with legacy systems via REST APIs.",
+      "mutzigstar": "Real-time jury scoring system for national music competition (SABC). Built QR code-based candidate management and video processing pipeline for 500+ submissions.",
+      "missayoba": "Multi-platform voting system integrated with MTN Ayoba app. Handled 50,000+ votes with real-time monitoring dashboard for jury members on tablets.",
+      "heinekenquizz": "Consumer engagement platform for SABC/Heineken campaigns. Gamified quizz system with leaderboards and prize management. Trained end-users on the platform.",
+      "mtnquizz": "Subscriber loyalty platform for MTN Cameroon campaigns. Built scalable REST API handling peak traffic during promotional periods.",
+      "bigoodee": "Cross-platform haircare marketplace with web and mobile apps. Implemented booking system, product catalog, and payment integration."
     }
   },
   "experience": {

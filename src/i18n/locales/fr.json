@@ -123,6 +123,16 @@
       "api": "API",
       "library": "Librairie",
       "other": "Autre"
+    },
+    "descriptions": {
+      "coliturage": "Plateforme full-stack connectant voyageurs et expediteurs de colis. Authentification securisee, matching de trajets en temps reel et systeme de notifications email. Deploye et utilise en France.",
+      "financeiq": "Application de finances personnelles avec architecture offline-first utilisant IndexedDB. Suivi de budget, categorisation des depenses et analyses visuelles. 100% cote client pour la confidentialite.",
+      "eneo": "Portail entreprise pour la societe nationale d'electricite du Cameroun. Developpement du module de demande de branchement gerant 1000+ requetes mensuelles. Integration avec systemes existants via APIs REST.",
+      "mutzigstar": "Systeme de notation en temps reel pour concours musical national (SABC). Gestion des candidats par QR code et pipeline de traitement video pour 500+ soumissions.",
+      "missayoba": "Systeme de vote multi-plateforme integre a l'app MTN Ayoba. Gestion de 50,000+ votes avec tableau de bord temps reel pour le jury sur tablettes.",
+      "heinekenquizz": "Plateforme d'engagement consommateur pour campagnes SABC/Heineken. Systeme de quizz gamifie avec classements et gestion des prix. Formation des utilisateurs finaux.",
+      "mtnquizz": "Plateforme de fidelisation abonnes pour campagnes MTN Cameroun. API REST scalable gerant les pics de trafic pendant les periodes promotionnelles.",
+      "bigoodee": "Marketplace de soins capillaires cross-platform avec applications web et mobile. Systeme de reservation, catalogue produits et integration paiement."
     }
   },
   "experience": {
