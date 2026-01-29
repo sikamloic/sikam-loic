@@ -297,7 +297,7 @@ export function Home() {
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { value: '3+', label: t('home.stats.experience') },
+                  { value: '4+', label: t('home.stats.experience') },
                   { value: '15+', label: t('home.stats.projects') },
                   { value: '6+', label: t('home.stats.clients') },
                   { value: '100%', label: t('home.stats.passion') },

@@ -77,7 +77,6 @@ const PROJECTS_DATA: (Omit<Project, 'description'> & { descriptionKey: string })
     featured: false,
     category: 'web',
     startDate: '2024-01',
-    demoUrl: 'https://smart.mtn.cm',
     isEnterprise: true,
   },
   {

@@ -31,13 +31,13 @@ const COMMANDS = {
   about: {
     fr: `👋 Loic Sikam - Développeur Full Stack Freelance
 
-🎯 3+ ans d'expérience en développement web & mobile
+🎯 4+ ans d'expérience en développement web & mobile
 🌍 Basé au Cameroun, disponible en remote
 💼 Spécialisé en React, Angular, Node.js, Laravel
 🚀 Passionné par les nouvelles technologies et l'IA`,
     en: `👋 Loic Sikam - Full Stack Freelance Developer
 
-🎯 3+ years of experience in web & mobile development
+🎯 4+ years of experience in web & mobile development
 🌍 Based in Cameroon, available for remote work
 💼 Specialized in React, Angular, Node.js, Laravel
 🚀 Passionate about new technologies and AI`,

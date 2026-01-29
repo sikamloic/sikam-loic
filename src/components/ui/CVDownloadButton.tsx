@@ -15,7 +15,7 @@ const CV_CONTENT_FR = `
     <div>
       <h1 style="font-size: 28px; color: #1e293b; margin: 0 0 5px 0;">Loic Sikam</h1>
       <div style="font-size: 16px; color: #10b981; font-weight: 600; margin-bottom: 10px;">Developpeur Full Stack Freelance</div>
-      <div style="font-size: 13px; color: #64748b; max-width: 350px;">3+ ans d'experience en developpement web et mobile. Specialise en React, Angular, Node.js et Laravel. Disponible pour des missions freelance.</div>
+      <div style="font-size: 13px; color: #64748b; max-width: 350px;">4+ ans d'experience en developpement web et mobile. Specialise en React, Angular, Node.js et Laravel. Disponible pour des missions freelance.</div>
     </div>
     <div style="text-align: right; font-size: 13px; color: #475569;">
       <div>loicsikam272@gmail.com</div>
@@ -137,7 +137,7 @@ const CV_CONTENT_EN = `
     <div>
       <h1 style="font-size: 28px; color: #1e293b; margin: 0 0 5px 0;">Loic Sikam</h1>
       <div style="font-size: 16px; color: #10b981; font-weight: 600; margin-bottom: 10px;">Full Stack Freelance Developer</div>
-      <div style="font-size: 13px; color: #64748b; max-width: 350px;">3+ years of experience in web & mobile development. Specialized in React, Angular, Node.js and Laravel. Available for freelance missions.</div>
+      <div style="font-size: 13px; color: #64748b; max-width: 350px;">4+ years of experience in web & mobile development. Specialized in React, Angular, Node.js and Laravel. Available for freelance missions.</div>
     </div>
     <div style="text-align: right; font-size: 13px; color: #475569;">
       <div>loicsikam272@gmail.com</div>

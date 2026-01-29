@@ -27,8 +27,8 @@
   "home": {
     "greeting": "Hi, I'm",
     "title": "Full Stack Developer",
-    "tagline": "Full Stack Freelancer - I build modern and high-performance web and mobile applications",
-    "bio": "Full Stack Freelance Developer with over 3 years of experience in software development (web apps, mobile apps, and REST APIs). Creative, organized, and autonomous, I master object-oriented concepts and MVC architecture. Passionate about new technologies and AI, I adapt quickly and work effectively in teams. Available for short or long-term freelance missions.",
+    "tagline": "I'm Loic, a passionate developer who transforms your ideas into high-performance web and mobile applications",
+    "bio": "With over 4 years of experience, I've helped major companies like ENEO, MTN, and SABC achieve their digital projects. Specialized in React, Angular, Node.js, and Laravel, I create tailored solutions that combine performance and user experience. Autonomous and proactive, I'm committed to delivering quality code on time. Ready to tackle your technical challenges?",
     "location": "Cameroon",
     "roles": {
       "fullstack": "Full Stack Freelancer",
